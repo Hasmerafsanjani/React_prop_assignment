@@ -3,12 +3,12 @@ import React from 'react'
 function Card({prop}) {
     const cardStyle = {
         width:"100px",
-        margin:"10px",
-        border:'1px solid blue'
+        margin:"15px",
+        boxShadow : "rgba(100, 0, 0, 0.2) 0px 60px 40px -7px"
      }
  
      const inColor ={
-         height:"150px"
+         height:"180px"
          , width : "100px"
          ,backgroundColor:prop.color
      }
@@ -16,22 +16,20 @@ function Card({prop}) {
      const codehas = {
          textAlign:"center",
              width:"100px",
-             height:"40px",
-            color:"white"
+             height:"20px",
+            color:prop.color
      }
  
-     let para = {
+     const para = {
          textAlign:"center",
-         whidth:"",
-         height:"20px" ,
-          backgroundColor:"green",
-          color:"white"
+         height:"15px" ,
+          color:prop.color
      }
   return (
     <div style={cardStyle} >
-    <div style={inColor}>{prop.color}</div>
-    <h3 style={codehas}>{prop.name}</h3>
-    <p style={para}>{prop.hasCode}</p>
+    <div style={inColor}></div>
+    <h3 style={codehas}>{prop.hasCode}</h3>
+    <p style={para}>{prop.name}</p>
 </div>
   )
 }
